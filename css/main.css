@@ -6,6 +6,20 @@
 /* ==========================================================================
  * * Base styles: opinionated defaults
  * * ========================================================================== */
+main form {
+  margin: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+header {
+  margin: 20px 0 50px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
 html {
   color: #222;
   font-size: 1em;
@@ -56,6 +70,17 @@ textarea {
 /* ==========================================================================
  * * Author's custom styles
  * * ========================================================================== */
+body {
+  width: 800px;
+  margin: 0 auto !important;
+  text-align: center;
+}
+
+/*   GLOBALES   */
+.contenedor {
+  text-align: center;
+}
+
 /* ==========================================================================
  * * Helper classes
  * * ========================================================================== */
