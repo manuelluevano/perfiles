@@ -40,6 +40,12 @@ footer {
   background-color: black;
 }
 
+#error {
+  padding-bottom: 10px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
 html {
   color: #222;
   font-size: 1em;
