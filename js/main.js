@@ -58,3 +58,25 @@
 
     });  //DOM Content Loaded
 })();
+
+$( document ).ready(function() {
+    console.log( "Página cargada correctamente - con jQuery" );
+
+    // Reloj actulización automática 
+
+    function relooj(){
+        var reloj = new Date();
+
+        var hora = reloj.getHours();
+        var minutos = reloj.getMinutes();
+        var segundos = reloj.getSeconds();
+
+        var recarga = setInterval(relooj, 500);
+
+        document.getElementById('print').innerHTML =  hora + ' : ' + minutos + ' : ' +  segundos;
+
+    };
+    
+    relooj();
+
+});
