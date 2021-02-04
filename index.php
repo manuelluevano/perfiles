@@ -31,9 +31,9 @@
 <body class="contenedor">
   <h2>Seleciona la opcion deseada</h2>  
 
-  <a href="crear-perfil.html" class="btn btn-secondary">Nuevos datos</a>
+  <a href="crear-perfil.php" class="btn btn-secondary">Nuevos datos</a>
   
-  <a href="perfiles-creados.html" class="btn btn-secondary">Ver lista</a>
+  <a href="perfiles-creados.php" class="btn btn-secondary">Ver lista</a>
 </body>
 
 

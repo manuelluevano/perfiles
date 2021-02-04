@@ -37,6 +37,8 @@ header {
 .reloj {
   font-size: 30px;
   font-weight: 600;
+  color: blue;
+  border: 2px solid black;
 }
 
 footer {
@@ -110,7 +112,7 @@ body {
 /*   GLOBALES   */
 .contenedor {
   width: 90%;
-  margin: 0 auto;
+  margin: 10px auto;
   text-align: center;
   padding-bottom: 20px;
 }
