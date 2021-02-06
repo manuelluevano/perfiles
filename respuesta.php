@@ -13,7 +13,11 @@
     <?php $fecha = $resultado['trip-start']; ?>
     <?php $link = $resultado['link']; ?>
     <?php $numero = $resultado['numero']; ?>
- 
+
+
+    <?php $link_real = $resultado['link_real']; ?>
+    <?php $pais = $resultado['pais']; ?>
+
 
 
     <!-- Validar que los campos no lleguen vacios  -->
@@ -60,8 +64,28 @@
     <?php } else{
       echo "La fecha es obligatoria";
     } ?>
+<hr>
+<?php 
+      if(! (filter_has_var(INPUT_POST, 'link_real')  && (strlen(filter_input(INPUT_POST, 'link_real')) > 0 ))){
+        echo "El link real es obligatorio";
+      }else{ ?>
+        <?php $nuevo_link_real = filter_var($link_real, FILTER_SANITIZE_STRING); ?>
+        <p> Link real: <?php echo $nuevo_link_real; ?> </p>
+      
+<?php }    ?>
+
+<hr>
+
+<?php if(($pais) > 0) { ?>
+      <p> País de creación del perfil: <?php echo $pais; ?> </p>
+    <?php } else{
+      echo "El país es obligatorio";
+    } ?>
 
 
+    <pre>
+      <?php var_dump($resultado); ?>
+    </pre>
 
   </main>
 

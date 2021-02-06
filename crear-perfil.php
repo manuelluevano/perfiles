@@ -26,13 +26,13 @@
       <label for="numero">Número teléfonico</label>
         <input type="tel" placeholder="Número" id="telefono" name="numero">
         
-        <!-- <h3>Datos perfil real</h3>
+         <h3>Datos perfil real</h3>
         
         <label for="link">Link perfil real</label>
-        <input type="text" placeholder="Link del perfil" id="link-perfil-real">
+        <input type="text" placeholder="Link del perfil" id="link-perfil-real" name="link_real">
         
         <label for="pais">Selecciona el país:</label>
-        <select id="pais" >
+        <select id="pais" name="pais">
           <option value="1">Argentina</option>
           <option value="2">Bolivia</option>
           <option value="3">Brasil</option>
@@ -49,13 +49,13 @@
           <option value="14">Perú</option>
           <option value="15">Uruguay</option>
           <option value="16">Venezuela</option>
-        </select> -->
+        </select>
         
         
         <!-- Crear array para almacenar los valor de los inputs  -->
         
         
-        <input type="submit" class="btn btn-success" disabled>
+        <input type="submit" class="btn btn-success" >
         
       </form>
       
@@ -64,6 +64,45 @@
           </div>
           
         </main>
+
+
+      <?php
+      
+        try{
+        
+          require_once('includes/funciones/bd_conexion.php');
+
+          $sql = "SELECT * FROM input_crear_perfil";
+          $resultado = $conn->query($sql);
+
+        }catch(\Exception $e){
+          echo $e->getMessage();
+        }
+
+
+      ?>
+
+      <div class="datos">
+        <?php
+          echo $sql;
+
+          while($input_crear_perfil = $resultado->fetch_assoc() ) { ?>
+
+            <pre>
+                <?php  //var_dump($input_crear_perfil);  ?>
+                <?php  echo $input_crear_perfil['nombre_perfil'];  ?>
+            </pre>
+           
+          <?php } ?>
+
+      </div>
+
+     
+
+      <?php
+        $conn->close();
+        
+      ?>
 
 
       <?php include_once 'includes/templates/footer.php' ?>
