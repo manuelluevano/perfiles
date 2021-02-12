@@ -66,49 +66,5 @@
         </main>
 
 
-      <?php
-      
-        try{
-        
-          require_once('includes/funciones/bd_conexion.php');
-
-          $sql = " SELECT perfil_id, nombre_perfil, email, contrasena, fecha_creacion, link_perfil, numero, link_perfil_real,  pais, nombre_usuario ";
-          $sql .= " FROM crear_perfil ";
-          $sql .= " INNER JOIN pais_perfiles ";
-          $sql .= " ON crear_perfil.pais_id = pais_perfiles.paises_id ";
-          $sql .= " INNER JOIN usuarios ";
-          $sql .= " ON crear_perfil.admin_id = usuarios.usuario_id ";
-          $sql .= " ORDER BY perfil_id ";
-
-          $resultado = $conn->query($sql);
-
-        }catch(\Exception $e){
-          echo $e->getMessage();
-        }
-
-
-      ?>
-
-      <div class="datos">
-        <?php
-          echo $sql;
-
-          while($crear_perfil = $resultado->fetch_assoc() ) { ?>
-
-            <pre>
-                <?php  var_dump($crear_perfil);  ?>
-            </pre>
-           
-          <?php } ?>
-
-      </div>
-
      
-
-      <?php
-        $conn->close();
-        
-      ?>
-
-
-      <?php include_once 'includes/templates/footer.php' ?>
+<?php include_once 'includes/templates/footer.php' ?>
