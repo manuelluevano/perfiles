@@ -115,10 +115,16 @@
               <h6>
 
               <div class="datos_usuarios">
+                
+                <div class="user">
+                  <i class="fas fa-user"></i>
+                  <p> <?php echo $usuario['usuario']; ?> </p>
+                </div>
+                <div class="pass">
+                  <i class="fas fa-key"></i>
+                  <p> <?php echo $usuario['pass']; ?> </p>
+                </div>
 
-                <p class="user"> <?php echo $usuario['usuario']; ?> </p>
-
-                <p class="pass"> <?php echo $usuario['pass']; ?> </p>
               </div>
 
                 <!-- <pre>
