@@ -91,6 +91,9 @@
     ?>
 
 
+  <?php include_once 'includes/templates/ubicacion.php' ?>
+
+
     <?php include_once 'includes/templates/footer.php' ?>
 
 

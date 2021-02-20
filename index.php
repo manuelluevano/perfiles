@@ -1,6 +1,10 @@
 <?php include_once 'includes/templates/header.php' ?>
 
 
+
+
+
+
 <body class="">
   <h2>Seleciona la opcion deseada</h2>  
 
@@ -12,6 +16,7 @@
   
 </body>
 
+<?php include_once 'includes/templates/ubicacion.php' ?>
 
 
 <?php include_once 'includes/templates/footer.php' ?>
