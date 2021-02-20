@@ -13,6 +13,8 @@
   <a href="perfiles-creados.php" class="btn btn-secondary">Ver lista</a>
 
   <a href="lista-perfiles-creados.php" class="btn btn-secondary">Lista Perfiles Creados</a>
+
+  <a href="registro.php" class="btn btn-secondary">Registro Usuarios</a>
   
 </body>
 

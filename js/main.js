@@ -2,20 +2,25 @@
 (function(){
     "use strict";
 
-    $(document).ready(function(){
-        $.ageCheck({
-          "redirectTo" : "http://localhost:8888/perfiles/index.php",
-          "title" : "Verificador de edad"
-        });
-     });
+    // $(document).ready(function(){
+    //     $.ageCheck({
+    //       "redirectTo" : "http://localhost:8888/perfiles/index.php",
+    //       "title" : "Verificador de edad"
+    //     });
+    //  });
 
 
     document.addEventListener('DOMContentLoaded', function(){
 
-    console.log("Página cargada!")
+    console.log("Página cargada!");
 
 
-     
+    console.log("");
+
+   
+
+
+
 
     /*   Variables de los inputs  */ 
      var nombre = document.getElementById('nombre');
@@ -29,6 +34,7 @@
 
 
      var error = document.getElementById('error');
+
 
 
     /*   Valida inputs */
@@ -67,6 +73,9 @@
         }
     }
 
+
+      
+
     });  //DOM Content Loaded
 })();
 
@@ -91,7 +100,27 @@ $( document ).ready(function() {
     relooj();
 
 
-  
 
+     /*   REGISTRO NEWSLETTER  */ 
 
+     var registro_newsletter = document.getElementById('btn_newsletter');
+     var nombre_cliente = document.getElementById('nombre_cliente');
+
+     /*  Function validar inputs del newsletter */
+     function validarBoton(){
+         if(nombre_cliente.value == ''){
+             registro_newsletter.disabled = true;
+         }
+         else{
+             registro_newsletter.disabled = false;
+         }
+     }
+ 
+     
+     validarBoton();
+     
+     /*  Resiclamos una funcion ya utilizada*/
+     nombre_cliente.addEventListener('blur', validarBoton);
+
+        
 });
