@@ -9,7 +9,7 @@
 <script src="js/jquery-3.5.1.min.js" type="text/javascript"></script>   
 <script src="js/main.js"></script>
 <script src="https://kit.fontawesome.com/04730c9c8a.js" crossorigin="anonymous"></script>
-
+<script src="js/jquery.agecheck.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
 <script>

@@ -1,10 +1,21 @@
+
 (function(){
     "use strict";
+
+    $(document).ready(function(){
+        $.ageCheck({
+          "redirectTo" : "http://localhost:8888/perfiles/index.php",
+          "title" : "Verificador de edad"
+        });
+     });
+
 
     document.addEventListener('DOMContentLoaded', function(){
 
     console.log("Página cargada!")
 
+
+     
 
     /*   Variables de los inputs  */ 
      var nombre = document.getElementById('nombre');

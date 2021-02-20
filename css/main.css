@@ -73,6 +73,10 @@ footer {
   display: grid;
   grid-template-columns: repeat(2, 1fr); }
 
+.lista-perfiles table .tr_datos td {
+  border: 1px solid red;
+  padding: 20px; }
+
 html {
   color: #222;
   font-size: 1em;

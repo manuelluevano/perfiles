@@ -18,9 +18,23 @@
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
+  
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
+
+  <?php
+
+      $archivo = basename($_SERVER['PHP_SELF']);
+      $pagina = str_replace(".php", "", $archivo);
+
+      if($pagina == 'index'){
+        echo '  <link rel="stylesheet" href="css/agecheck.css"> ';
+      }else if($pagina == ''){
+        echo '';
+      }
+
+  ?>
 
   <meta name="theme-color" content="#fafafa">
 

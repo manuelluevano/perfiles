@@ -1,7 +1,6 @@
 <?php include_once 'includes/templates/header.php' ?>
 
 
-<h2>Datos de perfiles creados</h2>
 
 <?php
       
@@ -26,50 +25,69 @@
 
     ?>
 
-    <div class="datos">
+    <div class="datos_perfiles contenedor">
       <?php
         echo $sql;
 
-        $users = array();
+        $users = array();?>
 
-        while($usuarios = $resultado->fetch_assoc() ) { 
-  
-          //OBTENER SOLO LOS NOMBRES DE LOS USUARIOS
-          $nombre = $usuarios['nombre_usuario'];
-  
-          $usuario = array(
-  
-            'usuario' => $usuarios['nombre_perfil'],
-            'imei' => $usuarios['email'],
-            'pass' => $usuarios['contrasena_perfil'],
-            'fecha' => $usuarios['fecha_creacion'],
-            'link_perfil' => $usuarios['link_perfil'],
-            'numero' => $usuarios['numero'],
-            'link_perfil_real' => $usuarios['link_perfil_real'],
-            'pais' => $usuarios['pais'],
-            'nombre_usuario' => $usuarios['nombre_usuario']
-  
-          );
+      <section class="lista-perfiles">
 
-          
-          ?>
-  
-           <pre>
-              <?php  var_dump($usuario);  ?>
-          </pre> 
-         
-        <?php } ?>
+        <h2>Perfiles Creados</h2>
 
+            <div class="datos">
+            
+              <?php  while($usuarios = $resultado->fetch_assoc() ) { ?>
+
+              <table class="tabla_perfiles">
+                  <thead>
+                    <tr>
+                      <th>Nombre: </th>
+                      <th>Email: </th>
+                      <th>Contraseña: </th>
+                      <th>Fecha de creación: </th>
+                      <th>Link facebook (nuevo): </th>
+                      <th>Número Télefonico: </th>
+                      <th>link facebook (real): </th>
+                      <th>Admin: </th>
+                    </tr>
+                    
+                  </thead>
+
+
+
+              
+                  <tr class="tr_datos">
+                    <td> <?php echo $usuarios['nombre_perfil'] ?> </td>
+                    <td> <?php echo $usuarios['email'] ?> </td>
+                    <td> <?php echo $usuarios['contrasena_perfil'] ?> </td>
+                    <td> <?php echo $usuarios['fecha_creacion'] ?> </td>
+                    <td> <?php echo $usuarios['link_perfil'] ?> </td>
+                    <td> <?php echo $usuarios['numero'] ?> </td>
+                    <td> <?php echo $usuarios['link_perfil_real'] ?> </td>
+                    <td> <?php echo $usuarios['pais'] ?> </td>
+                    <td> <?php echo $usuarios['nombre_usuario'] ?> </td>
+
+                    
+                  </tr>
+
+              </table>
+            </div>
+
+              <!-- <pre>
+                  <?php  //var_dump($usuarios);  ?>
+              </pre> 
+             -->
+            <?php } ?>
+
+        </section>
     </div>
 
-
- 
 
 
 
     <?php
       $conn->close();
-      
     ?>
 
 
