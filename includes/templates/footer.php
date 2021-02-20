@@ -9,7 +9,21 @@
 <script src="js/jquery-3.5.1.min.js" type="text/javascript"></script>   
 <script src="js/main.js"></script>
 <script src="https://kit.fontawesome.com/04730c9c8a.js" crossorigin="anonymous"></script>
-<script src="js/jquery.agecheck.js"></script>
+
+  <!--  FUNCION CONDICIONAL PARA CARGAGR ARCHIVOS DE ESTILO CUANDO ES NECESARIO Y MEJORAR EL PERFORMANCE DEL SITIO  -->  
+
+  <?php
+
+      $archivo = basename($_SERVER['PHP_SELF']);
+      $pagina = str_replace(".php", "", $archivo);
+
+      if($pagina == 'index'){
+        echo '  <script src="js/jquery.agecheck.js"></script>  ';
+      }else if($pagina == ''){
+        echo '';
+      }
+
+  ?>
 
 <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
 <script>
