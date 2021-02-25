@@ -2,12 +2,12 @@
 (function(){
     "use strict";
 
-    // $(document).ready(function(){
-    //     $.ageCheck({
-    //       "redirectTo" : "http://localhost:8888/perfiles/index.php",
-    //       "title" : "Verificador de edad"
-    //     });
-    //  });
+     $(document).ready(function(){
+         $.ageCheck({
+           "redirectTo" : "http:localhost:8888/perfiles/index.php",
+           "title" : "Verificador de edad"
+         });
+      });
 
 
     document.addEventListener('DOMContentLoaded', function(){

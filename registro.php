@@ -26,7 +26,7 @@
   <!-- Crear array para almacenar los valor de los inputs  -->
   
   
-  <input type="submit" class="btn btn-success" id="btn_newsletter" >
+  <input type="submit" class="btn btn-success" id="btn_newsletter" name="submit" >
 
 
   
