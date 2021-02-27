@@ -1,5 +1,6 @@
 <?php include_once 'includes/templates/header.php' ?>
 
+<a href="lista_registrados_newsletter.php" class="btn btn-secondary">Lista de Registrados</a>
 
 
 <body class="">

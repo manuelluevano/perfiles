@@ -74,7 +74,11 @@ footer {
   grid-template-columns: repeat(2, 1fr); }
 
 .lista-perfiles table .tr_datos td {
-  border: 1px solid red;
+  border: 2px solid red;
+  padding: 20px; }
+
+.lista_registrados table .tr_datos td {
+  border: 2px solid red;
   padding: 20px; }
 
 html {
