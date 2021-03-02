@@ -1,86 +1,72 @@
 <?php include_once 'includes/templates/header.php' ?>
 
-  <main class="contenedor">
+  <main class=" bg-rojo">
 
     <h3>Datos perfil nuevo</h3>
+    
+    <form action="respuesta.php" method="post" action="#" class="bg-amarillo form sombra">
+    
 
-    <form action="respuesta.php" method="post" action="#">
-
-      <legend>Añadir un perfil <span>Todos los campos son obligatorios</span> </legend>
+    <legend>Añadir un perfil <span>Todos los campos son obligatorios</span> </legend>
+    <?php include_once 'includes/templates/formulario.php' ?>
+              <div class="campo">
+                <input type="submit" class="btn btn-success" value="Crear">
+              </div>
       
-      <div class="campo">
-        <label for="nombre">Ingresa el nombre del perfil</label>
-        <input type="text" id="nombre" placeholder="Nombre de perfil" name="nombre">
-      </div>
-
-      <div class="campo">
-        <label for="email">Ingresa el email</label>
-        <input type="email" placeholder="Correo electronico" id="email" name="email">
-      </div>
-
-      <div class="campo">
-        <label for="pass">Ingresa la contraseña</label>
-        <input type="password" name="" id="pass" placeholder="Contraseña" name="pass">
-      </div>
-
-      <div class="campo">
-        <label for="date">Ingresa la fecha de creación</label>
-        <input type="date" id="date" name="trip-start" value="01-01-2020" 
-        min="01-01-2020" max="2022-12-30" id="fecha" name="date">
-      </div>
-
-      <div class="campo">
-        <label for="link">Link del perfil nuevo</label>
-        <input type="text" placeholder="Link del perfil" id="link-perfil" name="link">
-      </div>
-
-      <div class="campo">
-        <label for="numero">Número teléfonico</label>
-        <input type="tel" placeholder="Número" id="telefono" name="numero">
-      </div>
-
-         <h3>Datos perfil real</h3>
-        <div class="campo">
-          <label for="link">Link perfil real</label>
-          <input type="text" placeholder="Link del perfil" id="link-perfil-real" name="link_real">
-        </div>
-
-        <div class="campo">
-          <label for="pais">Selecciona el país:</label>
-          <select id="pais" name="pais">
-            <option value="1">Argentina</option>
-            <option value="2">Bolivia</option>
-            <option value="3">Brasil</option>
-            <option value="4">Chile</option>
-            <option value="5">Colombia</option>
-            <option value="6">Costa Rica</option>
-            <option value="7">Cuba</option>
-            <option value="8">Ecuador</option>
-            <option value="9">El Salvador</option>
-            <option value="10">Guatemala</option>
-            <option value="11">Honduras</option>
-            <option value="12">México</option>
-            <option value="13">Panamá</option>
-            <option value="14">Perú</option>
-            <option value="15">Uruguay</option>
-            <option value="16">Venezuela</option>
-          </select>
-        </div>
-        
-        <!-- Crear array para almacenar los valor de los inputs  -->
-        
-        <div class="campo">
-          <input type="submit" class="btn btn-success" >
-        </div>
-
-      </form>
+    </form>
       
-        <div id="error" class="error">
-          
-          </div>
-          
-        </main>
+      <div id="error" class="error"> 
+    </main>
 
+    <div class="bg-blanco sombra form contenedor">
+      <div class="contenedor-contactos">
+        <h2>Contactos</h2>
 
-     
+            <input type="text" id="buscar" class="buscador sombra" placeholder="Buscar contactos">
+
+            <p class="total_perfiles">Total perfiles  <span>2</span></p>        
+
+        <div class="contenedor-tabla">
+          <table class="listado_perfiles">
+            <thead>
+              <tr>
+                <th>Nombre: </th>
+                <th>email: </th>
+                <th>contraseña: </th>
+                <th>Fecha de creacion: </th>
+                <th>Link nuevo perfil: </th>
+                <th>Número teléfonico: </th>
+                <th>Link perfil real: </th>
+                <th>país: </th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+
+            <tbody class="datos_perfiles">
+              <tr>
+                <td>Juan</td>
+                <td>a@gmail.com</td>
+                <td>235a456sd8654a</td>
+                <td>21/02/2021</td>
+                <td>https://www.facebook.com/joseadrian.gomez.5682</td>
+                <td>3312685530</td>
+                <td>https://www.facebook.com/adsafsa.gomez.5682</td>
+                <td>Argentina</td>
+                <td class="acciones">
+                  <a href="" class="btn btn-editar">
+                    <i class="fas fa-pen-square"></i>
+                  </a>
+
+                  <button data-id="1" class="btn-borrar btn" type="button">
+                    <i class="fas fa-trash"></i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+
+          </table>
+        </div>
+      </div>
+    </div>
+
 <?php include_once 'includes/templates/footer.php' ?>
