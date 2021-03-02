@@ -4,7 +4,7 @@
 
     <h3>Datos perfil nuevo</h3>
     
-    <form action="respuesta.php" method="post" action="#" class="bg-amarillo form sombra">
+    <form action="respuesta.php" method="post" action="#" class="bg-amarillo form sombra" id="contacto">
     
 
     <legend>Añadir un perfil <span>Todos los campos son obligatorios</span> </legend>
